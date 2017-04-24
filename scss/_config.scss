@@ -1,0 +1,71 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font Stacks
+
+$font-url--google        : 'https://fonts.googleapis.com/css?family=Courgette';
+$font-family--secondary  : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font Weights
+
+$font-weight--medium     : 400;
+$font-weight--bold       : 700;
+
+// Descriptive Base Colors
+
+$white : #fff;//wrapper background
+$black : #0b0b0b; // not used
+$grey  : #4c4c4c;// font color
+
+$feta             : #ffeb7f; //background
+$monte-carlo      : #7bcbc4; //submit
+$shakespeare      : #58b7cd; //li buttons
+$vivid-tangerine  : #ffa07A;
+$apricot          : #e9967a;
+$salmon           : #fa8072;
+$tall-poppy       : #c0392b; // input error
+
+// Color Usage
+
+$color-primary    : $monte-carlo; //submit
+$color-secondary  : $shakespeare; //li buttons
+$color-shadow     : rgba($black, .4);
+
+// Color Palette Modifiers
+
+$palettes: (
+  grey: (
+    xx-light : lighten($grey, 43%),
+    x-light  : lighten($grey, 35%),
+    light    : lighten($grey, 12%),
+    base     : $grey,
+    dark     : darken($grey, 8%),
+    x-dark   : darken($grey, 16%)
+  ),
+	black: (
+		light    : lighten($black, 10%),
+		base     : $black,
+		dark     : darken($black, 10%)
+	),
+  shadow: (
+    light      : rgba($black, .25),
+    base       : rgba($black, .4),
+    box-dark   : rgba($black, .13),
+    box-light  : rgba($black, .12)
+  ),
+  shakespeare: (
+  light      : lighten($color-secondary, .20),
+  base       : $color-secondary
+  )
+);
+
+// Text
+
+$base__font-size : 16px;
+
+// UI Colors
+
+$ui-colors: (
+  warning: $tall-poppy,
+)
