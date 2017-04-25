@@ -1,95 +1,108 @@
-$no-bear: 0px;
+$no-bear: 0;
 $baby-bear: 768px;
 $mama-bear: 769px;
 $papa-bear: 880px;
-
 @media (min-width: $no-bear) and (max-width: $baby-bear) {
-  header {
-    padding: 1.25em;
-  }
-  h1 {
-    font-size: 3.6em;
-    margin: .3em 0 0;
-  }
-  ul {
-    li {
-      margin-bottom: 1em;
+    header {
+        padding: 1.25em;
     }
-  }
-  form {
-    width: 95%;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 2.5em;
-    button {
-      padding: 12px 0;
-      margin-top: .5em;
+
+    h1 {
+        font-size: 3.6em;
+        margin: 0.3em 0 0;
     }
-    input {
-      font-size: 1em;
-      text-align: center;
+
+    ul {
+        li {
+            margin-bottom: 1em;
+        }
     }
-  }
-  .wrapper {
-    margin: 0;
-  }
-  .main {
-    padding: 2em 1em .75em;
-  }
+
+    form {
+        width: 95%;
+        flex-direction: column;
+        margin: 2.5em auto auto;
+
+        button {
+            padding: 12px 0;
+            margin-top: 0.5em;
+        }
+
+        input {
+            font-size: 1em;
+            text-align: center;
+        }
+    }
+
+    .wrapper {
+        margin: 0;
+    }
+
+    .main {
+        padding: 2em 1em 0.75em;
+    }
 }
 @media (min-width: $mama-bear) {
-  header {
-    height: 280px;
-    padding: 2.5em 1em 1em;
-    background-position: 0 -95px;
-  }
-  .main > div {
-    float: right;
-    display: inline-block;
-    margin-top: 12px;
-    margin-right: 1.25%;
-  }
-  div > label {
-    margin-top: 12px;
-  }
-  h1 {
-    font-size: 5.8em;
-  }
-  h2 {
-    float: left;
-    font-size: 1.9em;
-    margin-left: 1.25%;
-  }
-  form {
-    margin: 4.15em auto 0;
-    z-index: 3000;
-    position: relative;
-  }
-  .wrapper {
-    width: 90%;
-  }
-  .main {
-    padding: 3.8em 1.5em .75em;
-    position: relative;
-    z-index: 10;
-  }
-  ul {
-    display: flex;
-    clear: both;
-    flex-wrap: wrap;
-    padding-top: 1.25em;
-    li {
-      flex-grow: 1;
-      flex-basis: 47.5%;
-      margin: 0 1.25% 1em;
+    header {
+        height: 280px;
+        padding: 2.5em 1em 1em;
+        background-position: 0 -95px;
     }
-  }
-}
 
-@media (min-width: $papa-bear) {
-  ul {
-    li {
-      flex-basis: 20%;
+    .main > div {
+        float: right;
+        display: inline-block;
+        margin-top: 12px;
+        margin-right: 1.25%;
     }
-  }
+
+    div > label {
+        margin-top: 12px;
+    }
+
+    h1 {
+        font-size: 5.8em;
+    }
+
+    h2 {
+        float: left;
+        font-size: 1.9em;
+        margin-left: 1.25%;
+    }
+
+    form {
+        margin: 4.15em auto 0;
+        z-index: 3000;
+        position: relative;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .main {
+        padding: 3.8em 1.5em 0.75em;
+        position: relative;
+        z-index: 10;
+    }
+
+    ul {
+        display: flex;
+        clear: both;
+        flex-wrap: wrap;
+        padding-top: 1.25em;
+
+        li {
+            flex-grow: 1;
+            flex-basis: 47.5%;
+            margin: 0 1.25% 1em;
+        }
+    }
+}
+@media (min-width: $papa-bear) {
+    ul {
+        li {
+            flex-basis: 20%;
+        }
+    }
 }

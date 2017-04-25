@@ -116,8 +116,7 @@ button,
 select {
   text-transform: none; }
 
-button,
-html input[type="button"],
+button, html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
@@ -187,21 +186,21 @@ body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: #ffeb7f; }
 
+form button,
 h1,
-p,
-form button {
+p {
   color: #fff; }
 
-input,
-button {
+button,
+input {
   border: none;
   outline: none; }
 
 h1 {
   font-family: "https://fonts.googleapis.com/css?family=Courgette", cursive;
   text-shadow: 0 1px 0 rgba(11, 11, 11, 0.4);
-  line-height: .65;
-  margin-top: .5em;
+  line-height: 0.65;
+  margin-top: 0.5em;
   margin-bottom: 0; }
 
 h2 {
@@ -217,14 +216,14 @@ form {
   display: inline-block;
   overflow: hidden;
   display: flex;
-  border-radius: .2em;
+  border-radius: 0.2em;
   border: solid 4px #fff;
   box-shadow: 0 1px 14px rgba(11, 11, 11, 0.12); }
   form button {
     padding: 0 1em;
     font-size: 1em;
     background: #7bcbc4;
-    border-radius: .2em; }
+    border-radius: 0.2em; }
 
 ul {
   display: grid;
@@ -234,7 +233,7 @@ ul {
   ul li {
     padding: 1em;
     background: #fff;
-    border-radius: .2em;
+    border-radius: 0.2em;
     border: solid 1px #59b7cd;
     border-bottom: solid 2px #59b7cd;
     position: relative; }
@@ -252,26 +251,28 @@ header {
     font-size: 1.15em;
     width: 100%; }
 
-li span, li input[type=text] {
+li input[type=text],
+li span {
   color: #6b6b6b;
   font-size: 1.3em;
-  margin-bottom: .3em; }
-  li span:first-child, li input[type=text]:first-child {
+  margin-bottom: 0.3em; }
+  li input[type=text]:first-child,
+  li span:first-child {
     display: block; }
 li input[type=text] {
-  padding: .2em;
+  padding: 0.2em;
   width: 95%;
   border: 1px dotted #383838; }
 li label {
-  font-size: .9em;
+  font-size: 0.9em;
   display: block;
   color: #6b6b6b; }
 li button {
-  font-size: .78em;
+  font-size: 0.78em;
   margin-top: 1.65em;
-  margin-right: .4em;
-  border-radius: .3em;
-  padding: .4em .6em;
+  margin-right: 0.4em;
+  border-radius: 0.3em;
+  padding: 0.4em 0.6em;
   color: #fff;
   background: #58b7cd; }
 
@@ -279,7 +280,7 @@ li button {
   width: 100%;
   max-width: 900px;
   margin: 2.5em auto;
-  border-radius: .35em;
+  border-radius: 0.35em;
   background: #fcfcfc;
   overflow: hidden;
   box-shadow: 0 0 26px rgba(11, 11, 11, 0.13); }
@@ -302,13 +303,13 @@ div > label {
 .input--warning {
   background-color: #c0392b; }
 
-@media (min-width: 0px) and (max-width: 768px) {
+@media (min-width: 0) and (max-width: 768px) {
   header {
     padding: 1.25em; }
 
   h1 {
     font-size: 3.6em;
-    margin: .3em 0 0; }
+    margin: 0.3em 0 0; }
 
   ul li {
     margin-bottom: 1em; }
@@ -316,11 +317,10 @@ div > label {
   form {
     width: 95%;
     flex-direction: column;
-    margin: auto;
-    margin-top: 2.5em; }
+    margin: 2.5em auto auto; }
     form button {
       padding: 12px 0;
-      margin-top: .5em; }
+      margin-top: 0.5em; }
     form input {
       font-size: 1em;
       text-align: center; }
@@ -329,7 +329,7 @@ div > label {
     margin: 0; }
 
   .main {
-    padding: 2em 1em .75em; } }
+    padding: 2em 1em 0.75em; } }
 @media (min-width: 769px) {
   header {
     height: 280px;
@@ -362,7 +362,7 @@ div > label {
     width: 90%; }
 
   .main {
-    padding: 3.8em 1.5em .75em;
+    padding: 3.8em 1.5em 0.75em;
     position: relative;
     z-index: 10; }
 

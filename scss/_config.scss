@@ -46,7 +46,7 @@ $palettes: (
 	black: (
 		light    : lighten($black, 10%),
 		base     : $black,
-		dark     : darken($black, 10%)
+		dark     : darken($black, 16%)
 	),
   shadow: (
     light      : rgba($black, .25),

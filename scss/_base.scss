@@ -13,150 +13,144 @@ body {
 	background: $feta;
 }
 
+form button,
 h1,
-p,
-form button {
-  color: $white;
+p {
+	color: $white;
 }
 
-input,
-button {
-  border: none;
-  outline: none;
+button,
+input {
+	border: none;
+	outline: none;
 }
 
 h1 {
 	font-family: $font-url--google, cursive;
 	text-shadow: 0 1px 0 palette(shadow);
-	line-height: .65;
-  margin-top: .5em;
+	line-height: 0.65;
+	margin-top: 0.5em;
 	margin-bottom: 0;
 }
 
 h2 {
-  margin-top: 0;
+	margin-top: 0;
 }
 
 p {
-  font-size: 1.1em;
-  text-shadow: 0 1px 0 palette(shadow, light);
+	font-size: 1.1em;
+	text-shadow: 0 1px 0 palette(shadow, light);
 }
-
 // Form
-
 form {
-  width: 60%;
-  background: $white;
-  display: inline-block;
-  overflow: hidden;
-  display: flex;
-  border-radius: .2em;
-  border: solid 4px $white;
-  box-shadow: 0 1px 14px palette(shadow, box-light);
-		button {
-			padding: 0 1em;
-			font-size: 1em;
-			background: $color-primary;
-			border-radius: .2em;
-		}
+	width: 60%;
+	background: $white;
+	display: inline-block;
+	overflow: hidden;
+	display: flex;
+	border-radius: 0.2em;
+	border: solid 4px $white;
+	box-shadow: 0 1px 14px palette(shadow, box-light);
+
+	button {
+		padding: 0 1em;
+		font-size: 1em;
+		background: $color-primary;
+		border-radius: 0.2em;
+	}
 }
-
 // Unordered list
-
 ul {
 	display: grid;
-  list-style: none;
-  padding: 0;
-  margin: 2em 0 1em;
-		li {
-			padding: 1em;
-		  background: $white;
-		  border-radius: .2em;
-		  border: solid 1px palette(shakespeare, light);
-		  border-bottom: solid 2px palette(shakespeare, light);
-		  position: relative;
-		}
-}
+	list-style: none;
+	padding: 0;
+	margin: 2em 0 1em;
 
+	li {
+		padding: 1em;
+		background: $white;
+		border-radius: 0.2em;
+		border: solid 1px palette(shakespeare, light);
+		border-bottom: solid 2px palette(shakespeare, light);
+		position: relative;
+	}
+}
 // Button
-
 button {
-  cursor: pointer;
+	cursor: pointer;
 }
-
 // Header
-
 header {
-	@include linear-gradient('header-bg.jpg', 90deg, $vivid-tangerine, $apricot, $salmon);
-  text-align:center;
-		input {
-		  padding: 12px;
-		  font-size: 1.15em;
-		  width: 100%;
-		}
+	@include linear-gradient( 'header-bg.jpg', 90deg, $vivid-tangerine, $apricot, $salmon);
+	text-align: center;
+
+	input {
+		padding: 12px;
+		font-size: 1.15em;
+		width: 100%;
+	}
 }
-
 // List
-
 li {
-	span, input[type=text] {
+	input[type=text],
+	span {
 		color: palette(grey, light);
 		font-size: 1.3em;
-		margin-bottom: .3em;
-			&:first-child {
-				  display: block;
-			}
+		margin-bottom: 0.3em;
+
+		&:first-child {
+			display: block;
+		}
 	}
+
 	input[type=text] {
-	  padding: .2em;
-	  width: 95%;
-	  border: 1px dotted palette(grey, dark);
+		padding: 0.2em;
+		width: 95%;
+		border: 1px dotted palette(grey, dark);
 	}
+
 	label {
-		font-size: .9em;
+		font-size: 0.9em;
 		display: block;
 		color: palette(grey, light);
 	}
+
 	button {
-		font-size: .78em;
+		font-size: 0.78em;
 		margin-top: 1.65em;
-		margin-right: .4em;
-		border-radius: .3em;
-		padding: .4em .6em;
+		margin-right: 0.4em;
+		border-radius: 0.3em;
+		padding: 0.4em 0.6em;
 		color: $white;
 		background: $color-secondary;
 	}
 }
-
 // Wrapper
-
 .wrapper {
-  width: 100%;
-  max-width: 900px;
-  margin: 2.5em auto;
-  border-radius: .35em;
-  background: #fcfcfc;
-  overflow: hidden;
-  box-shadow: 0 0 26px palette(shadow, box-dark);
+	width: 100%;
+	max-width: 900px;
+	margin: 2.5em auto;
+	border-radius: 0.35em;
+	background: #fcfcfc;
+	overflow: hidden;
+	box-shadow: 0 0 26px palette(shadow, box-dark);
 }
-
 // Div discendants
-
 div > input:last-child {
-  font-size: 1em;
-  margin-left: 6px;
+	font-size: 1em;
+	margin-left: 6px;
 }
+
 div > label {
-  color: palette(grey, x-light);
+	color: palette(grey, x-light);
 }
-
 // Responded
-
 .responded {
-  transition: 0.4s;
-  border-color: palette(shakespeare, light);
+	transition: 0.4s;
+	border-color: palette(shakespeare, light);
 }
+
 .responded label {
-  transition: 0.4s;
-  color: palette(shakespeare, light);
+	transition: 0.4s;
+	color: palette(shakespeare, light);
 }
