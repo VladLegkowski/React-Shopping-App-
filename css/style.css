@@ -272,7 +272,7 @@ li button {
   margin-top: 1.65em;
   margin-right: 0.4em;
   border-radius: 0.3em;
-  padding: 0.4em 0.6em;
+  padding: 1em 1.4em;
   color: #fff;
   background: #58b7cd; }
 
@@ -293,11 +293,12 @@ div > label {
   color: #a5a5a5; }
 
 .responded {
-  transition: 0.4s;
+  opacity: 0.5;
+  transition: 0.2s;
   border-color: #59b7cd; }
 
 .responded label {
-  transition: 0.4s;
+  transition: 0.2s;
   color: #59b7cd; }
 
 .input--warning {

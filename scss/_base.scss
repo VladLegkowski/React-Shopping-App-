@@ -42,6 +42,7 @@ p {
 	text-shadow: 0 1px 0 palette(shadow, light);
 }
 // Form
+
 form {
 	width: 60%;
 	background: $white;
@@ -60,6 +61,7 @@ form {
 	}
 }
 // Unordered list
+
 ul {
 	display: grid;
 	list-style: none;
@@ -76,10 +78,12 @@ ul {
 	}
 }
 // Button
+
 button {
 	cursor: pointer;
 }
 // Header
+
 header {
 	@include linear-gradient( 'header-bg.jpg', 90deg, $vivid-tangerine, $apricot, $salmon);
 	text-align: center;
@@ -91,6 +95,7 @@ header {
 	}
 }
 // List
+
 li {
 	input[type=text],
 	span {
@@ -120,12 +125,13 @@ li {
 		margin-top: 1.65em;
 		margin-right: 0.4em;
 		border-radius: 0.3em;
-		padding: 0.4em 0.6em;
+		padding: 1em 1.4em;
 		color: $white;
 		background: $color-secondary;
 	}
 }
 // Wrapper
+
 .wrapper {
 	width: 100%;
 	max-width: 900px;
@@ -136,6 +142,7 @@ li {
 	box-shadow: 0 0 26px palette(shadow, box-dark);
 }
 // Div discendants
+
 div > input:last-child {
 	font-size: 1em;
 	margin-left: 6px;
@@ -145,12 +152,14 @@ div > label {
 	color: palette(grey, x-light);
 }
 // Responded
+
 .responded {
-	transition: 0.4s;
+	opacity: 0.5;
+	transition: 0.2s;
 	border-color: palette(shakespeare, light);
 }
 
 .responded label {
-	transition: 0.4s;
+	transition: 0.2s;
 	color: palette(shakespeare, light);
 }

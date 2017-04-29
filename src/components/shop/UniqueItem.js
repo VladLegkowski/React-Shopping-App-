@@ -2,14 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 export const UniqueItem = (props) => {
+  const partial = (fn, ...args) => fn.bind(null, ...args)
+  const handleToggle = partial(props.handleToggle, props.id)
+  const handleRemove = partial(props.handleRemove, props.id)
+  const countUp = partial(props.countUp, props.id)
+  const listClass = props.isComplete
+        ? 'responded'
+        : ''
     return (
-        <li>
+        <li className={listClass}>
             <span>{props.name}</span>
-            <label>Confirmed
-                <input type="checkbox" onChange={() => props.handleToggle(props.id)} checked = {props.isComplete}/>
+            <label htmlFor={props.item}>Confirmed
+                <input id={props.item} type="checkbox" onChange={handleToggle} checked={props.isComplete}/>
             </label>
-            <button>Edit</button>
-            <button>Remove</button>
+            <button onClick={handleRemove} disabled={props.isComplete}>Remove</button>
+            <button onClick={countUp} disabled={props.isComplete}>{props.count}</button>
         </li>
     )
 }
