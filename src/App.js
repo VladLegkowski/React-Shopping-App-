@@ -10,30 +10,17 @@ import {
     isComplete,
     increaseCount
 } from './lib/ItemsHelpers'
+import {loadItems, createItem, saveItem, deleteItem} from './lib/itemService'
 
 class App extends Component {
     state = {
-        items: [
-            {
-                id: 1,
-                name: 'Water',
-                isComplete: false,
-                count: 0
-            }, {
-                id: 2,
-                name: 'Salt',
-                isComplete: false,
-                count: 0
-            }, {
-                id: 3,
-                name: 'Bread',
-                isComplete: false,
-                count: 0
-            }
-        ],
+        items: [],
         isChecked: false,
         currentItem: '',
         inputMessage: 'Add Items to Shopping Basket'
+    }
+    componentDidMount() {
+        loadItems().then(items => this.setState({items}))
     }
     countUp = (id) => {
         const item = findById(id, this.state.items)
@@ -50,12 +37,14 @@ class App extends Component {
         e.preventDefault()
         const updatedItems = removeItem(this.state.items, id)
         this.setState({items: updatedItems})
+        deleteItem(id)
     }
     handleToggle = (id) => {
         const item = findById(id, this.state.items)
         const toggled = toggleItem(item)
         const updatedItems = updateItem(this.state.items, toggled)
         this.setState({items: updatedItems})
+        saveItem(toggled)
     }
     handleSubmit = (e) => {
         e.preventDefault()
@@ -68,6 +57,7 @@ class App extends Component {
         }
         const updatedItems = addItem(this.state.items, newItem)
         this.setState({items: updatedItems, currentItem: ''})
+        createItem(newItem)
     }
     handleEmptySubmit = (e) => {
         e.preventDefault()
