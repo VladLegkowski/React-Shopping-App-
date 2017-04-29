@@ -27,6 +27,7 @@ class App extends Component {
         const increased = increaseCount(item)
         const updatedItems = updateItem(this.state.items, increased)
         this.setState({items: updatedItems})
+        saveItem(increased)
     }
     toggleChange = (e) => {
         this.setState({
