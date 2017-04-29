@@ -2,4 +2,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## React Shopping Basket App
 
-In progress
+Shopping App in React and ES6
