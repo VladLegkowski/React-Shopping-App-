@@ -9,20 +9,14 @@
     {
       "id": 2,
       "name": "Salt",
-      "isComplete": false,
+      "isComplete": true,
       "count": 0
     },
     {
       "id": 3,
       "name": "Bread",
       "isComplete": false,
-      "count": 4
-    },
-    {
-      "id": 92,
-      "name": "Choco",
-      "isComplete": false,
-      "count": 0
+      "count": 5
     }
   ]
 }
