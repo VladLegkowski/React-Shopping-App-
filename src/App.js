@@ -28,25 +28,25 @@ class App extends Component {
         const updatedItems = updateItem(this.state.items, increased)
         this.setState({items: updatedItems})
         saveItem(increased)
-    }
+    };
     toggleChange = (e) => {
         this.setState({
             isChecked: !this.state.isChecked
         })
-    }
+    };
     handleRemove = (id, e) => {
         e.preventDefault()
         const updatedItems = removeItem(this.state.items, id)
         this.setState({items: updatedItems})
         deleteItem(id)
-    }
+    };
     handleToggle = (id) => {
         const item = findById(id, this.state.items)
         const toggled = toggleItem(item)
         const updatedItems = updateItem(this.state.items, toggled)
         this.setState({items: updatedItems})
         saveItem(toggled)
-    }
+    };
     handleSubmit = (e) => {
         e.preventDefault()
         const newId = generateId()
@@ -59,14 +59,14 @@ class App extends Component {
         const updatedItems = addItem(this.state.items, newItem)
         this.setState({items: updatedItems, currentItem: ''})
         createItem(newItem)
-    }
+    };
     handleEmptySubmit = (e) => {
         e.preventDefault()
         this.setState({inputMessage: 'CANNOT SUBMIT EMPTY ITEM'})
-    }
+    };
     handleInputChange = (e) => {
         this.setState({currentItem: e.target.value, inputMessage: 'Add Items to Shopping Basket'})
-    }
+    };
     render() {
         const submitHandler = this.state.currentItem
             ? this.handleSubmit
